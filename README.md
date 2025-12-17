@@ -50,6 +50,12 @@ test/
 
 Statistics such as image dimensions, mask dimensions, brightness, sharpness, noise, and channel means are computed for analysis.
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/Images/Data.png" width="600"/>
+</p>
+
+<p align="center"><b>Figure:</b> Sample retinal fundus images and their corresponding ground truth masks.</p>
+
 ---
 ## Data Preprocessing
 
@@ -62,16 +68,12 @@ Each image undergoes the following steps:
 5. Normalize pixel values to `[0,1]`  
 6. Expand dimensions for model input
 7. Masks are binarized and reshaped to match the model input.
-   
-<p align="center">
-  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/Images/preprocessing.png" width="800"/>
-</p>
 
 <p align="center">
-  <b>Figure:</b> Preprocessing pipeline including green channel extraction, CLAHE, and unsharp masking.
+  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/Images/Processing.png" width="600"/>
 </p>
 
-
+<p align="center"><b>Figure:</b> Preprocessing steps including green channel extraction, CLAHE, and unsharp masking.</p>
 ---
 
 ## Data Augmentation
@@ -84,6 +86,12 @@ Augmentation techniques include:
 - Random shift (±10% of width/height)  
 
 Augmented images improve model generalization.
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/Images/Augmation.png" width="600"/>
+</p>
+
+<p align="center"><b>Figure:</b> Examples of augmented training images using rotation, flip, zoom, and shift.</p>
 
 
 ---
@@ -119,10 +127,10 @@ focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)
 - Accuracy
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/code/loss%20%26%20accuarcy.png" width="800"/>
+  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/Images/Accuracy%20%26%20Loss.png" width="600"/>
 </p>
 
-<p align="center"><b>Figure:</b> Training and validation loss and accuracy curves.</p>
+<p align="center"><b>Figure:</b> Training and validation loss and accuracy curves across epochs.</p>
 
 
   ---
@@ -131,14 +139,22 @@ focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)
 
 - Classification metrics: Precision, Recall, F1-score, AUC  
 - Confusion matrix visualized with Seaborn  
-- ROC curve plotted  
-
+- ROC curve plotted
+- 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/code/confusion%20matrix.png" width="450"/>
+  <table>
+    <tr>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/Images/Matrix.png" width="400"/>
+        <br/><b>Confusion Matrix</b>
+      </td>
+      <td align="center">
+        <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/Images/ROC%20%26%20PR.png" width="400"/>
+        <br/><b>ROC & PR Curves</b>
+      </td>
+    </tr>
+  </table>
 </p>
-
-<p align="center"><b>Figure:</b> Confusion matrix of vessel segmentation results.</p>
-
 
 ---
 
@@ -149,15 +165,13 @@ Random predictions are visualized with four views:
 1. Original image  
 2. Ground truth mask  
 3. Predicted mask  
-4. Morphological erosion of predicted mask  
-
+4. Morphological erosion of predicted mask
+   
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/Images/Predict.png" width="600"/>
+  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/Images/Predict.png" width="500"/>
 </p>
 
-<p align="center">
-  <b>Figure:</b> Visualization of retinal blood vessel segmentation results.
-</p>
+<p align="center"><b>Figure:</b> Random predictions of retinal blood vessel segmentation with erosion post-processing.</p>
 
 ---
 
@@ -182,6 +196,18 @@ Random predictions are visualized with four views:
       </a>
     </td>
     <td align="center">
+      <a href="https://github.com/momensaied">
+        <img src="https://avatars.githubusercontent.com/momensaied" width="150px;" alt=""/><br/>
+        <sub><b>Momen Saied</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/nouranmohamedmm">
+        <img src="https://avatars.githubusercontent.com/nouranmohamedmm" width="150px;" alt=""/><br/>
+        <sub><b>Nouran Mohamed</b></sub>
+      </a>
+    </td>
+    <td align="center">
       <a href="https://github.com/Arwa-eng">
         <img src="https://avatars.githubusercontent.com/Arwa-eng" width="150px;" alt=""/><br/>
         <sub><b>Arwa Mohamed</b></sub>
@@ -193,13 +219,5 @@ Random predictions are visualized with four views:
         <sub><b>Emad Samuel</b></sub>
       </a>
     </td>
-    <td align="center">
-      <a href="https://github.com/momensaied">
-        <img src="https://avatars.githubusercontent.com/momensaied" width="150px;" alt=""/><br/>
-        <sub><b>Momen Saied</b></sub>
-      </a>
-    </td>
   </tr>
 </table>
-
-
