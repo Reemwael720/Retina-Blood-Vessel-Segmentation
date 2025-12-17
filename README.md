@@ -114,9 +114,12 @@ focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)
 - Intersection over Union (IoU)  
 - Accuracy
 
-  <p align="center">
-  <img src="tps://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/code/loss%20%26%20accuarcy.png" width="800"/>
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/code/loss%20%26%20accuarcy.png" width="600"/>
 </p>
+
+<p align="center"><b>Figure:</b> Training and validation loss and accuracy curves.</p>
+
 
   ---
 
@@ -127,8 +130,11 @@ focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)
 - ROC curve plotted  
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/code/confusion%20matrix.png" width="800"/>
+  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/code/confusion%20matrix.png" width="450"/>
 </p>
+
+<p align="center"><b>Figure:</b> Confusion matrix of vessel segmentation results.</p>
+
 
 ---
 
@@ -140,7 +146,6 @@ Random predictions are visualized with four views:
 2. Ground truth mask  
 3. Predicted mask  
 4. Morphological erosion of predicted mask  
- 
 
 ---
 
@@ -153,3 +158,36 @@ Random predictions are visualized with four views:
 5. Evaluate metrics and visualize predictions.
 
 ---
+ 
+## 👥 Contributors
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/Reemwael720">
+        <img src="https://avatars.githubusercontent.com/Reemwael720" width="150px;" alt=""/><br/>
+        <sub><b>Reem Al_Ghazali</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/Arwa-eng">
+        <img src="https://avatars.githubusercontent.com/Arwa-eng" width="150px;" alt=""/><br/>
+        <sub><b>Arwa Mohamed</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/emadsamuel78-debug">
+        <img src="https://avatars.githubusercontent.com/emadsamuel78-debug" width="150px;" alt=""/><br/>
+        <sub><b>Emad Samuel</b></sub>
+      </a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/momensaied">
+        <img src="https://avatars.githubusercontent.com/momensaied" width="150px;" alt=""/><br/>
+        <sub><b>Momen Saied</b></sub>
+      </a>
+    </td>
+  </tr>
+</table>
+
+
