@@ -5,5 +5,148 @@
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
 This project implements a **U-Net based deep learning pipeline** for **retinal blood vessel segmentation** from fundus images. The pipeline includes **data loading, preprocessing, augmentation, model training, and evaluation**.
+---
+
+## DESCRIPTION
+
+This project focuses on **automatically detecting and segmenting blood vessels in retinal fundus images**, which is crucial for early diagnosis and monitoring of ophthalmic diseases such as **diabetic retinopathy, glaucoma, and hypertension-related retinal damage**.  
+
+The approach uses a **U-Net convolutional neural network**, which is widely used in medical image segmentation due to its **encoder-decoder architecture with skip connections**, allowing the model to capture both **global context** and **fine details**.  
+
+Key steps include:
+
+- **Data analysis:** Compute image and mask statistics, sharpness, brightness, and channel means.  
+- **Preprocessing:** Enhance green channel, apply CLAHE and unsharp masking, normalize images.  
+- **Data augmentation:** Random rotation, flip, zoom, and shift to increase dataset variability.  
+- **Model training:** Train U-Net with Focal Tversky Loss to handle imbalanced classes.  
+- **Evaluation:** Assess performance using Dice, IoU, accuracy, precision, recall, F1-score, AUC, and visualize segmentation results.  
+
+This project can be extended to assist in **clinical decision support systems** for ophthalmology.
+
+---
+## Table of Contents
+
+1. [Project Description](#project-description)  
+2. [Dataset](#dataset)  
+3. [Data Preprocessing](#data-preprocessing)  
+4. [Data Augmentation](#data-augmentation)  
+5. [Model Architecture](#model-architecture)  
+6. [Loss Function & Metrics](#loss-function--metrics)  
+7. [Training](#training)  
+8. [Evaluation](#evaluation)  
+9. [Visualization](#visualization)
+10. [Usage](#usage)  
+
+---
+## Dataset
+
+The dataset is divided into **train** and **test** sets:
+train/
+    image/
+    mask/
+test/
+    image/
+    mask/
+- **Images:** Retinal fundus images (RGB).  
+- **Masks:** Binary masks representing blood vessels.  
+
+Statistics such as image dimensions, mask dimensions, brightness, sharpness, noise, and channel means are computed for analysis.
+
+---
+## Data Preprocessing
+
+Each image undergoes the following steps:
+
+1. Convert BGR → RGB  
+2. Extract the **green channel**  
+3. Apply **CLAHE** for contrast enhancement  
+4. Apply **Unsharp Masking** for edge enhancement  
+5. Normalize pixel values to `[0,1]`  
+6. Expand dimensions for model input  
+
+Masks are binarized and reshaped to match the model input.
+
+<img width="1336" height="757" alt="image" src="https://github.com/user-attachments/assets/60356bb3-f0f3-439f-b1fc-a76e55c91c24" />   
+---
+
+## Data Augmentation
+
+Augmentation techniques include:
+
+- Random rotation (±15°)  
+- Random flipping (horizontal & vertical)  
+- Random zoom (±10%)  
+- Random shift (±10% of width/height)  
+
+Augmented images improve model generalization.
+
+
+---
+
+## Model Architecture
+
+The **U-Net** model consists of:
+
+- **Encoder:** 4 blocks of `Conv2D` + `MaxPooling2D`  
+- **Bottleneck:** 2 `Conv2D` layers  
+- **Decoder:** 4 blocks of `UpSampling2D` + skip connections  
+- **Output:** 1 channel with `sigmoid` activation  
+
+<img width="481" height="502" alt="image" src="https://github.com/user-attachments/assets/5ec17f60-b54f-4085-ba54-97f9d36ca6f6" />
+
+---
+
+## Training
+
+- Optimizer: **Adam (1e-4)**  
+- Epochs: 100  
+- Steps per epoch: `len(train_images)/batch_size`  
+- Callbacks: `ModelCheckpoint` and `ReduceLROnPlateau`  
+
+---
+## Loss Function & Metrics
+
+**Loss:** Focal Tversky Loss  
+focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)
+
+**Metrics:**  
+- Dice Coefficient  
+- Intersection over Union (IoU)  
+- Accuracy
+
+  <img width="392" height="402" alt="image" src="https://github.com/user-attachments/assets/ea78aad3-3bec-424b-bb6d-c8c7ffd9ceae" />
+
+  ---
+
+## Evaluation
+
+- Classification metrics: Precision, Recall, F1-score, AUC  
+- Confusion matrix visualized with Seaborn  
+- ROC curve plotted  
+
+<img width="1292" height="712" alt="image" src="https://github.com/user-attachments/assets/e7b27c87-32bb-4da4-886d-95ca68af3a7b" />      ![Uploading image.png…]()
+
+---
+
+## Visualization
+
+Random predictions are visualized with four views:
+
+1. Original image  
+2. Ground truth mask  
+3. Predicted mask  
+4. Morphological erosion of predicted mask  
+ 
+![Uploading image.png…]()
+
+---
+
+## Usage
+
+1. Set dataset paths and load images.  
+2. Preprocess images and masks.  
+3. Create training and validation generators.  
+4. Train the U-Net model with `model.fit()`.  
+5. Evaluate metrics and visualize predictions.
 
 ---
