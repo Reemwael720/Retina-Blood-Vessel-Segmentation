@@ -109,10 +109,14 @@ The **U-Net** model consists of:
 **Loss:** Focal Tversky Loss  
 focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)
 
-**Metrics:**  
+**Curves:**  
 - Dice Coefficient  
 - Intersection over Union (IoU)  
 - Accuracy
+
+  <p align="center">
+  <img src="tps://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/code/loss%20%26%20accuarcy.png" width="800"/>
+</p>
 
   ---
 
@@ -122,6 +126,9 @@ focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)
 - Confusion matrix visualized with Seaborn  
 - ROC curve plotted  
 
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/code/confusion%20matrix.png" width="800"/>
+</p>
 
 ---
 
