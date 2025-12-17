@@ -60,9 +60,12 @@ Each image undergoes the following steps:
 3. Apply **CLAHE** for contrast enhancement  
 4. Apply **Unsharp Masking** for edge enhancement  
 5. Normalize pixel values to `[0,1]`  
-6. Expand dimensions for model input  
+6. Expand dimensions for model input
+7. Masks are binarized and reshaped to match the model input.
 
-Masks are binarized and reshaped to match the model input.
+<p align="center">
+  <img src="![Uploading preprocessing.png…]()" width="350"/>
+</p>
 
 ---
 
