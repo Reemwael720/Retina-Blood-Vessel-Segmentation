@@ -4,7 +4,6 @@
 [![TensorFlow](https://img.shields.io/badge/TensorFlow-2.x-orange)](https://www.tensorflow.org/) 
 [![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-This project implements a **U-Net based deep learning pipeline** for **retinal blood vessel segmentation** from fundus images. The pipeline includes **data loading, preprocessing, augmentation, model training, and evaluation**.
 ---
 
 ## DESCRIPTION
@@ -26,16 +25,15 @@ This project can be extended to assist in **clinical decision support systems** 
 ---
 ## Table of Contents
 
-1. [Project Description](#project-description)  
-2. [Dataset](#dataset)  
-3. [Data Preprocessing](#data-preprocessing)  
-4. [Data Augmentation](#data-augmentation)  
-5. [Model Architecture](#model-architecture)  
-6. [Loss Function & Metrics](#loss-function--metrics)  
-7. [Training](#training)  
-8. [Evaluation](#evaluation)  
-9. [Visualization](#visualization)
-10. [Usage](#usage)  
+1. [Dataset](#dataset)  
+2. [Data Preprocessing](#data-preprocessing)  
+3. [Data Augmentation](#data-augmentation)  
+4. [Model Architecture](#model-architecture)  
+5. [Loss Function & Metrics](#loss-function--metrics)  
+6. [Training](#training)  
+7. [Evaluation](#evaluation)  
+8. [Visualization](#visualization)
+9. [Usage](#usage)  
 
 ---
 ## Dataset
