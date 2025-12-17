@@ -28,12 +28,12 @@ This project can be extended to assist in **clinical decision support systems** 
 1. [Dataset](#dataset)  
 2. [Data Preprocessing](#data-preprocessing)  
 3. [Data Augmentation](#data-augmentation)  
-4. [Model Architecture](#model-architecture)  
-5. [Loss Function & Metrics](#loss-function--metrics)  
-6. [Training](#training)  
-7. [Evaluation](#evaluation)  
-8. [Visualization](#visualization)
-9. [Usage](#usage)  
+4. [Model Architecture](#model-architecture)
+5. [Training](#training)
+7. [Loss Function & Metrics](#loss-function--metrics)  
+8. [Evaluation](#evaluation)  
+9. [Visualization](#visualization)
+10. [Usage](#usage)  
 
 ---
 ## Dataset
@@ -64,7 +64,6 @@ Each image undergoes the following steps:
 
 Masks are binarized and reshaped to match the model input.
 
-<img width="1336" height="757" alt="image" src="https://github.com/user-attachments/assets/60356bb3-f0f3-439f-b1fc-a76e55c91c24" />   
 ---
 
 ## Data Augmentation
@@ -90,7 +89,6 @@ The **U-Net** model consists of:
 - **Decoder:** 4 blocks of `UpSampling2D` + skip connections  
 - **Output:** 1 channel with `sigmoid` activation  
 
-<img width="481" height="502" alt="image" src="https://github.com/user-attachments/assets/5ec17f60-b54f-4085-ba54-97f9d36ca6f6" />
 
 ---
 
@@ -112,8 +110,6 @@ focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)
 - Intersection over Union (IoU)  
 - Accuracy
 
-  <img width="392" height="402" alt="image" src="https://github.com/user-attachments/assets/ea78aad3-3bec-424b-bb6d-c8c7ffd9ceae" />
-
   ---
 
 ## Evaluation
@@ -122,7 +118,6 @@ focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)
 - Confusion matrix visualized with Seaborn  
 - ROC curve plotted  
 
-<img width="1292" height="712" alt="image" src="https://github.com/user-attachments/assets/e7b27c87-32bb-4da4-886d-95ca68af3a7b" />      ![Uploading image.png…]()
 
 ---
 
@@ -135,7 +130,6 @@ Random predictions are visualized with four views:
 3. Predicted mask  
 4. Morphological erosion of predicted mask  
  
-![Uploading image.png…]()
 
 ---
 
