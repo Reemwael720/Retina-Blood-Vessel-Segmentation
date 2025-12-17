@@ -62,9 +62,13 @@ Each image undergoes the following steps:
 5. Normalize pixel values to `[0,1]`  
 6. Expand dimensions for model input
 7. Masks are binarized and reshaped to match the model input.
+   
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/Images/preprocessing.png" width="800"/>
+</p>
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/code/preprocessing.png" width="800"/>
+  <b>Figure:</b> Preprocessing pipeline including green channel extraction, CLAHE, and unsharp masking.
 </p>
 
 
@@ -115,7 +119,7 @@ focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)
 - Accuracy
 
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/code/loss%20%26%20accuarcy.png" width="600"/>
+  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/code/loss%20%26%20accuarcy.png" width="800"/>
 </p>
 
 <p align="center"><b>Figure:</b> Training and validation loss and accuracy curves.</p>
@@ -146,6 +150,14 @@ Random predictions are visualized with four views:
 2. Ground truth mask  
 3. Predicted mask  
 4. Morphological erosion of predicted mask  
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/Reemwael720/Retina-Blood-Vessel-Segmentation/main/Images/Predict.png" width="600"/>
+</p>
+
+<p align="center">
+  <b>Figure:</b> Visualization of retinal blood vessel segmentation results.
+</p>
 
 ---
 
