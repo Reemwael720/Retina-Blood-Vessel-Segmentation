@@ -64,7 +64,7 @@ Each image undergoes the following steps:
 7. Masks are binarized and reshaped to match the model input.
 
 <p align="center">
-  <img src="![Uploading preprocessing.png…]()" width="350"/>
+  <img src="[![Uploading preprocessing.png…]()](https://github.com/Reemwael720/Retina-Blood-Vessel-Segmentation/blob/main/code/preprocessing.png)" width="350"/>
 </p>
 
 ---
