@@ -38,13 +38,16 @@ This project can be extended to assist in **clinical decision support systems** 
 ---
 ## Dataset
 
-The dataset is divided into **train** and **test** sets:
-`train 
-     image/
-     mask/
-test/
-     image/
-     mask/`
+The dataset is divided into
+```text
+dataset/
+├── train/
+│   ├── image/
+│   └── mask/
+└── test/
+    ├── image/
+    └── mask/
+```
 - **Images:** Retinal fundus images (RGB).  
 - **Masks:** Binary masks representing blood vessels.  
 
@@ -140,7 +143,7 @@ The **U-Net** model consists of:
 - Classification metrics: Precision, Recall, F1-score, AUC  
 - Confusion matrix visualized with Seaborn  
 - ROC curve plotted
-- 
+  
 <p align="center">
   <table>
     <tr>
