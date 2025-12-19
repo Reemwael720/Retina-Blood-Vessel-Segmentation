@@ -39,12 +39,12 @@ This project can be extended to assist in **clinical decision support systems** 
 ## Dataset
 
 The dataset is divided into **train** and **test** sets:
-train/
-    image/
-    mask/
+`train 
+     image/
+     mask/
 test/
-    image/
-    mask/
+     image/
+     mask/`
 - **Images:** Retinal fundus images (RGB).  
 - **Masks:** Binary masks representing blood vessels.  
 
@@ -74,8 +74,8 @@ Each image undergoes the following steps:
 </p>
 
 <p align="center"><b>Figure:</b> Preprocessing steps including green channel extraction, CLAHE, and unsharp masking.</p>
----
 
+---
 ## Data Augmentation
 
 Augmentation techniques include:
@@ -119,7 +119,7 @@ The **U-Net** model consists of:
 ## Loss Function & Metrics
 
 **Loss:** Focal Tversky Loss  
-focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)
+`focal_tversky_loss_alpha_beta(alpha=0.3, beta=0.7, gamma=0.75)`
 
 **Curves:**  
 - Dice Coefficient  
